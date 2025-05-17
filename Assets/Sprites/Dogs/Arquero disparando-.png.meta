@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,7 +108,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Arquero disparando-_0
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 0
+        width: 516
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bb4213a81862a14291e23d99e5975f4
+      internalID: -1281960381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arquero disparando-_1
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 0
+        width: 516
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ce81e67aea8894e8691d9365e71ba0
+      internalID: -1963828482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arquero disparando-_2
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 0
+        width: 482
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b5ebcceebb444a45917b73edba16195
+      internalID: 490111331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arquero disparando-_3
+      rect:
+        serializedVersion: 2
+        x: 2238
+        y: 0
+        width: 485
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1227b14723eb71f4fba1e602186a586f
+      internalID: 1217303869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arquero disparando-_4
+      rect:
+        serializedVersion: 2
+        x: 2943
+        y: 0
+        width: 483
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52cb04edc8f21c04eb7c03d8dc6a5620
+      internalID: -1562159738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arquero disparando-_5
+      rect:
+        serializedVersion: 2
+        x: 3614
+        y: 0
+        width: 515
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d053ad133c9e9248bd0b6f95fd59d29
+      internalID: -1275860474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +245,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Arquero disparando-_0: -1281960381
+      Arquero disparando-_1: -1963828482
+      Arquero disparando-_2: 490111331
+      Arquero disparando-_3: 1217303869
+      Arquero disparando-_4: -1562159738
+      Arquero disparando-_5: -1275860474
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
