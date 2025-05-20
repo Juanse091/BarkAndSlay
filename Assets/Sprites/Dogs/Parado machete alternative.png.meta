@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,7 +108,154 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Parado machete alternative_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 3
+        width: 370
+        height: 495
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad40fd307e383c49b11cebef05591a7
+      internalID: 1470112271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parado machete alternative_0
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 0
+        width: 370
+        height: 495
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3fe4a4dc26bd3e46b65cc2eb6127f28
+      internalID: -2119195019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parado machete alternative_1
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 0
+        width: 370
+        height: 495
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adfc1e6f9a7105b448b579ed29773bd2
+      internalID: -1180161747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parado machete alternative_2
+      rect:
+        serializedVersion: 2
+        x: 1607
+        y: 0
+        width: 370
+        height: 495
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b92881f176db7d54a88d44513258fcf9
+      internalID: 435790089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parado machete alternative_3
+      rect:
+        serializedVersion: 2
+        x: 2116
+        y: 0
+        width: 370
+        height: 495
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e2b74aa33a58a245b9e3f55d05eab92
+      internalID: 839718068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parado machete alternative_4
+      rect:
+        serializedVersion: 2
+        x: 2623
+        y: 0
+        width: 370
+        height: 495
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e3808490009cdc4481ea1dfa1cd4033
+      internalID: -1999508955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parado machete alternative_5
+      rect:
+        serializedVersion: 2
+        x: 3134
+        y: 0
+        width: 370
+        height: 495
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bb488f73c438974a802ef90c6612085
+      internalID: 490235948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +266,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Parado machete alternative_0: -2119195019
+      Parado machete alternative_1: -1180161747
+      Parado machete alternative_2: 435790089
+      Parado machete alternative_3: 839718068
+      Parado machete alternative_4: -1999508955
+      Parado machete alternative_5: 490235948
+      Parado machete alternative_6: -1616046518
+      Parado machete alternative_7: 1470112271
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

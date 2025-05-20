@@ -37,12 +37,28 @@ public class ArcherBot : MonoBehaviour
                 if (hit.collider != null && hit.collider.CompareTag("enemy"))
                 {
                     currentTarget = enemy.transform;
-                    animator.SetTrigger("Shoot"); // <-- activa animación
+
+                    // Ajustar velocidad de animación antes de disparar
+                    float animSpeed = 1f / fireRate;
+                    animator.SetFloat("AnimSpeed", animSpeed);
+
+                    animator.SetTrigger("Shoot");
                     nextFireTime = Time.time + fireRate;
                     break;
                 }
             }
         }
+
+    }
+
+    public void UpgradeRadius(float amount)
+    {
+        detectionRadius += amount;
+    }
+
+    public void UpgradeFireRate(float amount)
+    {
+        fireRate = Mathf.Max(0.1f, fireRate - amount); 
     }
 
     public void ShootArrow()

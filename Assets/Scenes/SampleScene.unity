@@ -478,7 +478,7 @@ Transform:
   m_GameObject: {fileID: 106779126}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.49, y: -1.32, z: 0.012230352}
+  m_LocalPosition: {x: 9.49, y: -1.06, z: 0.012230352}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1129,7 +1129,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &401070929
 Transform:
   m_ObjectHideFlags: 0
@@ -1139,7 +1139,7 @@ Transform:
   m_GameObject: {fileID: 401070928}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.49, y: -3.06, z: 0.012230352}
+  m_LocalPosition: {x: 9.49, y: -2.7999997, z: 0.012230352}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1354,6 +1354,7 @@ GameObject:
   - component: {fileID: 547174303}
   - component: {fileID: 547174302}
   - component: {fileID: 547174301}
+  - component: {fileID: 547174305}
   m_Layer: 0
   m_Name: MacheteDog
   m_TagString: MacheteDog
@@ -1495,6 +1496,25 @@ Transform:
   - {fileID: 698101613}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &547174305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547174300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7d9a9de8dcc8904eb052592bbfdc41b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRange: 4
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  baseAttackDelay: 1
+  attackDelayUpgradeMultiplier: -0.1
+  upgradeLevel: 0
 --- !u!1 &595974522
 GameObject:
   m_ObjectHideFlags: 0
