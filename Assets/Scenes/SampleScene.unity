@@ -2806,40 +2806,49 @@ MonoBehaviour:
   - nombre: Damage
     descripcion: increases damage by +1
     nivel: 0
+    nivelMaximo: 5
     precioXP: 200
   - nombre: Archer Dog
     descripcion: Unlocks the archer Dog
     nivel: 0
-    precioXP: 0
+    nivelMaximo: 1
+    precioXP: 500
   - nombre: Machete Dog
     descripcion: Unlocks the Machete Dog
     nivel: 0
+    nivelMaximo: 1
     precioXP: 1000
   - nombre: Farmer Dog
     descripcion: Unlocks the Farmer Dog
     nivel: 0
+    nivelMaximo: 1
     precioXP: 100
   mejorasArcher:
   - nombre: 
     descripcion: 
     nivel: 0
+    nivelMaximo: 0
     precioXP: 0
   - nombre: 
     descripcion: 
     nivel: 0
+    nivelMaximo: 0
     precioXP: 0
   - nombre: 
     descripcion: 
     nivel: 0
+    nivelMaximo: 0
     precioXP: 0
   mejorasMachete:
   - nombre: 
     descripcion: 
     nivel: 0
+    nivelMaximo: 0
     precioXP: 0
   - nombre: 
     descripcion: 
     nivel: 0
+    nivelMaximo: 0
     precioXP: 0
   prefabUpgradeItem: {fileID: 324204696415785987, guid: f5502bcf50e1474448ab64f938cc5505, type: 3}
   contenedor: {fileID: 1716498327}

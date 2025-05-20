@@ -9,7 +9,8 @@ public class UpgradeMenuManager : MonoBehaviour
     {
         public string nombre;
         public string descripcion;
-        public int nivel;
+        public int nivel = 0;
+        public int nivelMaximo;
         public int precioXP;
     }
 
@@ -42,9 +43,9 @@ public class UpgradeMenuManager : MonoBehaviour
     public void AbrirMenuPara(string tipo)
     {
         if (upgradePanel.activeSelf)
-            return; // No abrir si ya está activo
+            return;
 
-        Time.timeScale = 0f; // ? Pausar juego
+        Time.timeScale = 0f;
         upgradePanel.SetActive(true);
         detailPanel.SetActive(false);
 
@@ -86,24 +87,48 @@ public class UpgradeMenuManager : MonoBehaviour
         detailPanel.SetActive(true);
 
         descripcionText.text = mejora.descripcion;
-        nivelText.text = "Nivel " + mejora.nivel;
-        precioText.text = mejora.precioXP + " XP";
 
-        comprarButton.interactable = true;
+        if (mejora.nivel >= mejora.nivelMaximo)
+        {
+            nivelText.text = "Max Level";
+            precioText.text = "-";
+            comprarButton.interactable = false;
+        }
+        else
+        {
+            nivelText.text = "Level " + mejora.nivel;
+            int precio = CalcularPrecio(mejora);
+            precioText.text = precio + " XP";
+            comprarButton.interactable = true;
+        }
+
         comprarButton.onClick.RemoveAllListeners();
         comprarButton.onClick.AddListener(() => ComprarMejora());
     }
 
     public void ComprarMejora()
     {
-        mejoraActual.nivel++;
-        MostrarDetalle(mejoraActual); // Actualiza UI
+        if (mejoraActual.nivel < mejoraActual.nivelMaximo)
+        {
+            mejoraActual.nivel++;
+            MostrarDetalle(mejoraActual);
+        }
     }
 
     public void CerrarMenu()
     {
         upgradePanel.SetActive(false);
         detailPanel.SetActive(false);
-        Time.timeScale = 1f; // ?? Reanudar juego
+        Time.timeScale = 1f;
+    }
+
+    private int CalcularPrecio(Mejora mejora)
+    {
+        if (mejora.nivel >= mejora.nivelMaximo)
+            return 0;
+
+        float incremento = 1.5f;
+        float precioFinal = mejora.precioXP * Mathf.Pow(incremento, mejora.nivel);
+        return Mathf.RoundToInt(precioFinal);
     }
 }
