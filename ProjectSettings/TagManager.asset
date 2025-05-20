@@ -8,6 +8,7 @@ TagManager:
   - obstacle
   - MacheteDog
   - ArcherDog
+  - Spawner
   layers:
   - Default
   - TransparentFX

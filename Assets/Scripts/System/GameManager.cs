@@ -49,16 +49,12 @@ public class GameManager : MonoBehaviour
         animPlayer.SetTrigger("Attack");
 
         golpeCount++;
+        
+    }
 
-        if (golpeCount >= 3)
-        {
-            audioSource.PlayOneShot(golpeFuerte);
-            golpeCount = 0;
-        }
-        else
-        {
-            audioSource.PlayOneShot(golpeNormal);
-        }
+    public void AudioHit()
+    {
+        audioSource.PlayOneShot(golpeNormal);
     }
 
     public static implicit operator GameObject(GameManager v)

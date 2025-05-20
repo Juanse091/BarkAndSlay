@@ -4,7 +4,11 @@ public class Arrow : MonoBehaviour
 {
     public float speed = 10f;
     public float lifeTime = 3f;
+
+    public float damage = 1f;
     private Vector2 direction;
+
+
 
     public void SetDirection(Vector2 dir)
     {
@@ -21,10 +25,9 @@ public class Arrow : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Arrow hit: " + collision.gameObject.layer);
         if (collision.CompareTag("enemy"))
         {
-            Destroy(collision.gameObject); // o baja vida
+            collision.GetComponent<EnemyHit>()?.TakeDamage(damage);
             Destroy(gameObject);
         }
         else if (collision.CompareTag("obstacle"))
