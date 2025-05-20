@@ -12,10 +12,13 @@ public class ArcherBot : MonoBehaviour
     private float nextFireTime = 0f;
     private Transform currentTarget;
     private Animator animator;
+    private AudioSource audioSource;
+
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -49,6 +52,8 @@ public class ArcherBot : MonoBehaviour
         Vector2 direction = (currentTarget.position - firePoint.position).normalized;
         GameObject arrow = Instantiate(arrowPrefab, firePoint.position, Quaternion.identity);
         arrow.GetComponent<Arrow>().SetDirection(direction);
+
+        audioSource.Play();
     }
 
     void OnDrawGizmosSelected()
