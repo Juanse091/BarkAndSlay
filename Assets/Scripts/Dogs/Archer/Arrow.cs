@@ -21,12 +21,13 @@ public class Arrow : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Arrow hit: " + collision.gameObject.layer);
         if (collision.CompareTag("enemy"))
         {
             Destroy(collision.gameObject); // o baja vida
             Destroy(gameObject);
         }
-        else if (collision.gameObject.layer == LayerMask.NameToLayer("Obstacles"))
+        else if (collision.CompareTag("obstacle"))
         {
             Destroy(gameObject);
         }

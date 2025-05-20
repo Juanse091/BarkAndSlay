@@ -27,6 +27,8 @@ public class ArcherBot : MonoBehaviour
             foreach (var enemy in enemies)
             {
                 Vector2 direction = (enemy.transform.position - firePoint.position).normalized;
+                Debug.DrawRay(firePoint.position, direction * detectionRadius, Color.green, 0.1f);
+
                 RaycastHit2D hit = Physics2D.Raycast(firePoint.position, direction, detectionRadius, enemyLayer | obstacleLayer);
 
                 if (hit.collider != null && hit.collider.CompareTag("enemy"))
@@ -40,7 +42,6 @@ public class ArcherBot : MonoBehaviour
         }
     }
 
-    // Este método será llamado desde el evento de animación
     public void ShootArrow()
     {
         if (currentTarget == null) return;
