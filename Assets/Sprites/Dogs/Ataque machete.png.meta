@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,7 +108,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Ataque machete_0
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 0
+        width: 371
+        height: 498
+      alignment: 9
+      pivot: {x: 0.5065992, y: 0.50000006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7998e950a39db7e4b95e4117666c8732
+      internalID: 1361877608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque machete_1
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 0
+        width: 386
+        height: 498
+      alignment: 9
+      pivot: {x: 0.5063429, y: 0.50000006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9af8e66b74f1554c92b0c2354204e19
+      internalID: -1430340725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque machete_2
+      rect:
+        serializedVersion: 2
+        x: 1660
+        y: 0
+        width: 676
+        height: 498
+      alignment: 9
+      pivot: {x: 0.7317837, y: 0.4901679}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99d217dfccd154a44b7575a01af09277
+      internalID: 1479500012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque machete_3
+      rect:
+        serializedVersion: 2
+        x: 2687
+        y: 0
+        width: 642
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3cb4336599cc954ba509f524ccc3f94
+      internalID: 487896773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque machete_4
+      rect:
+        serializedVersion: 2
+        x: 3551
+        y: 0
+        width: 402
+        height: 512
+      alignment: 9
+      pivot: {x: 0.6339834, y: 0.50478184}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc80fdae8f945746972a9eda5d624b2
+      internalID: -685261501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +224,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Ataque machete_0: 1361877608
+      Ataque machete_1: -1430340725
+      Ataque machete_2: 1479500012
+      Ataque machete_3: 487896773
+      Ataque machete_4: -685261501
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
