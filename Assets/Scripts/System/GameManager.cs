@@ -8,14 +8,20 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private Text Counter;
     [SerializeField] private GameObject HitBox;
+
+    [Header("Animators")]
     public Animator animPlayer;
     public Animator animClicker;
 
+    [Header("Audio")]
+
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip golpeNormal;
-    [SerializeField] private AudioClip golpeFuerte;
+    [SerializeField] private AudioClip macheteHit;
+    [SerializeField] private AudioClip zombieHit;
+    [SerializeField] private AudioClip xpSound;
 
-    private int counter;
+    [HideInInspector] public int XP;
     public static GameManager Instance;
 
     private void Awake()
@@ -37,15 +43,16 @@ public class GameManager : MonoBehaviour
 
     public void UpdateCounter()
     {
-        counter += 1;
-        Counter.text = counter.ToString();
+        audioSource.PlayOneShot(xpSound, volumeScale: 0.25f);
+        XP += 1;
+        Counter.text = XP.ToString();
     }
 
     public void PlayerHit()
     {
         animClicker.SetTrigger("Click");
         animPlayer.SetTrigger("Attack");
-        
+
     }
 
     public void AudioHit()
@@ -57,4 +64,16 @@ public class GameManager : MonoBehaviour
     {
         throw new NotImplementedException();
     }
+
+
+    public void MacheteHit()
+    {
+        audioSource.PlayOneShot(macheteHit);
+    }   
+
+    public void ZombieHit()
+    {
+        audioSource.PlayOneShot(zombieHit);
+    }
+
 }

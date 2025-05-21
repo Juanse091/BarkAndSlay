@@ -15,6 +15,7 @@ public class MacheteHitBox : MonoBehaviour
         if (collision.CompareTag("enemy"))
         {
             collision.GetComponent<EnemyHit>()?.TakeDamage(damage);
+            GameManager.Instance.MacheteHit();
         }
     }
 }
