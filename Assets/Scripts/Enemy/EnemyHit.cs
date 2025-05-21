@@ -56,6 +56,8 @@ public class EnemyHit : MonoBehaviour
         anim.SetTrigger("hit");
         if (health <= 0)
         {
+            GameManager.Instance.ZombieHit();
+
             this.tag = "Untagged";
             this.GetComponent<Collider2D>().enabled = false;
             isMoving = false;
