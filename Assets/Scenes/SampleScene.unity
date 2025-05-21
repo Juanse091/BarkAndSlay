@@ -180,7 +180,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 5fc20697744a746438b38ecc6b970513, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -286,7 +286,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -212.4, y: -77.97778}
+  m_AnchoredPosition: {x: -186.17, y: -77.97778}
   m_SizeDelta: {x: 315.11707, y: 84.64349}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &27813615
@@ -322,7 +322,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
 --- !u!222 &27813616
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1074,7 +1074,6 @@ GameObject:
   m_Component:
   - component: {fileID: 328697645}
   - component: {fileID: 328697644}
-  - component: {fileID: 328697646}
   m_Layer: 0
   m_Name: MusicManager
   m_TagString: Untagged
@@ -1091,7 +1090,7 @@ AudioSource:
   m_GameObject: {fileID: 328697643}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -3498088915208291963, guid: 2ef153a79575a634b85ba22ebd351131, type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a484a0bad8681a44ead52045ff8bce6b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
@@ -1193,21 +1192,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &328697646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!1 &346047162 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: 165ca02bf4dc15f42b46eb5181fe8075, type: 3}
+  m_PrefabInstance: {fileID: 403903420}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 328697643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c9cb7240a138374384fa6aa3d4251de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mixer: {fileID: 24100000, guid: 2ef153a79575a634b85ba22ebd351131, type: 2}
-  musicParam: MusicVolume
-  sfxParam: SFXVolume
 --- !u!1 &401070928
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,6 +1254,14 @@ PrefabInstance:
     - target: {fileID: -2253911629886400664, guid: 165ca02bf4dc15f42b46eb5181fe8075, type: 3}
       propertyPath: m_Name
       value: Farmer
+      objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 165ca02bf4dc15f42b46eb5181fe8075, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 165ca02bf4dc15f42b46eb5181fe8075, type: 3}
+      propertyPath: m_TagString
+      value: FarmerDog
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 165ca02bf4dc15f42b46eb5181fe8075, type: 3}
       propertyPath: m_FlipX
@@ -1533,7 +1530,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &547174301
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3112,22 +3109,22 @@ MonoBehaviour:
     descripcion: increases damage by +1
     nivel: 0
     nivelMaximo: 5
-    precioXP: 200
+    precioXP: 100
   - nombre: Archer Dog
     descripcion: Unlocks the archer Dog
     nivel: 0
     nivelMaximo: 1
-    precioXP: 500
+    precioXP: 1
   - nombre: Machete Dog
     descripcion: Unlocks the Machete Dog
     nivel: 0
     nivelMaximo: 1
-    precioXP: 1000
+    precioXP: 1
   - nombre: Farmer Dog
     descripcion: Unlocks the Farmer Dog
     nivel: 0
     nivelMaximo: 1
-    precioXP: 100
+    precioXP: 1
   mejorasArcher:
   - nombre: 
     descripcion: 
@@ -3155,6 +3152,12 @@ MonoBehaviour:
     nivel: 0
     nivelMaximo: 0
     precioXP: 0
+  archerDog: {fileID: 2030269887}
+  farmerDog: {fileID: 346047162}
+  macheteDog: {fileID: 547174300}
+  macheteExtraEnable: {fileID: 401070928}
+  macheteExtraDisable: {fileID: 694992740}
+  clickerHitBox: {fileID: 501763126}
   prefabUpgradeItem: {fileID: 324204696415785987, guid: f5502bcf50e1474448ab64f938cc5505, type: 3}
   contenedor: {fileID: 1716498327}
   detailPanel: {fileID: 1741155666}
@@ -3407,7 +3410,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1833017910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3767,7 +3770,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2030269888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3888,7 +3891,7 @@ AudioSource:
   m_GameObject: {fileID: 2030269887}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -3408626770447294599, guid: 2ef153a79575a634b85ba22ebd351131, type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9c6d73852eeb6eb4fa92c89bd31e51cc, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.3
@@ -4135,7 +4138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc2a377639c652f409ef63fb46179b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Counter: {fileID: 1673175506}
+  counterText: {fileID: 1673175506}
+  xpText: {fileID: 27813615}
   HitBox: {fileID: 501763123}
   animPlayer: {fileID: 595974524}
   animClicker: {fileID: 191429108}
@@ -4171,7 +4175,7 @@ AudioSource:
   m_GameObject: {fileID: 2092230260}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -3408626770447294599, guid: 2ef153a79575a634b85ba22ebd351131, type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.2
@@ -4282,10 +4286,10 @@ SceneRoots:
   - {fileID: 1276971364}
   - {fileID: 2030269891}
   - {fileID: 547174304}
+  - {fileID: 403903420}
   - {fileID: 106779127}
   - {fileID: 401070929}
   - {fileID: 328697645}
   - {fileID: 1833017913}
   - {fileID: 1731004416}
   - {fileID: 852252833}
-  - {fileID: 403903420}

@@ -9,6 +9,7 @@ TagManager:
   - MacheteDog
   - ArcherDog
   - Spawner
+  - FarmerDog
   layers:
   - Default
   - TransparentFX
