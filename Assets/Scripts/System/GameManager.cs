@@ -6,7 +6,10 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private Text Counter;
+    [Header("UI")]
+    [SerializeField] private Text counterText; // HUD principal
+    [SerializeField] private Text xpText;      // Canvas de mejoras
+
     [SerializeField] private GameObject HitBox;
 
     [Header("Animators")]
@@ -14,12 +17,15 @@ public class GameManager : MonoBehaviour
     public Animator animClicker;
 
     [Header("Audio")]
-
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip golpeNormal;
     [SerializeField] private AudioClip macheteHit;
     [SerializeField] private AudioClip zombieHit;
     [SerializeField] private AudioClip xpSound;
+
+    [Header("Efectos")]
+    [SerializeField] private GameObject bloodSplashPrefab;
+    [SerializeField] private Transform splashSpawnPoint;
 
     [HideInInspector] public int XP;
     public static GameManager Instance;
@@ -45,7 +51,28 @@ public class GameManager : MonoBehaviour
     {
         audioSource.PlayOneShot(xpSound, volumeScale: 0.25f);
         XP += 1;
-        Counter.text = XP.ToString();
+
+        counterText.text = XP.ToString(); // HUD contador
+        xpText.text = "XP    " + XP;         // Canvas de mejoras
+    }
+
+    public int GetXP()
+    {
+        return XP;
+    }
+
+    public bool TrySpendXP(int amount)
+    {
+        if (XP >= amount)
+        {
+            XP -= amount;
+
+            counterText.text = XP.ToString();
+            xpText.text = "XP    "+XP;
+
+            return true;
+        }
+        return false;
     }
 
     public void PlayerHit()
@@ -53,6 +80,7 @@ public class GameManager : MonoBehaviour
         animClicker.SetTrigger("Click");
         animPlayer.SetTrigger("Attack");
 
+        Instantiate(bloodSplashPrefab, splashSpawnPoint.position, Quaternion.identity);
     }
 
     public void AudioHit()
@@ -60,20 +88,18 @@ public class GameManager : MonoBehaviour
         audioSource.PlayOneShot(golpeNormal);
     }
 
-    public static implicit operator GameObject(GameManager v)
-    {
-        throw new NotImplementedException();
-    }
-
-
     public void MacheteHit()
     {
         audioSource.PlayOneShot(macheteHit);
-    }   
+    }
 
     public void ZombieHit()
     {
         audioSource.PlayOneShot(zombieHit);
     }
 
+    public static implicit operator GameObject(GameManager v)
+    {
+        throw new NotImplementedException();
+    }
 }

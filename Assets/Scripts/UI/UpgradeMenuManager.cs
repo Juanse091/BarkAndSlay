@@ -96,10 +96,11 @@ public class UpgradeMenuManager : MonoBehaviour
         }
         else
         {
-            nivelText.text = "Level " + mejora.nivel;
             int precio = CalcularPrecio(mejora);
+            nivelText.text = "Level " + mejora.nivel;
             precioText.text = precio + " XP";
-            comprarButton.interactable = true;
+
+            comprarButton.interactable = GameManager.Instance.GetXP() >= precio;
         }
 
         comprarButton.onClick.RemoveAllListeners();
@@ -110,8 +111,17 @@ public class UpgradeMenuManager : MonoBehaviour
     {
         if (mejoraActual.nivel < mejoraActual.nivelMaximo)
         {
-            mejoraActual.nivel++;
-            MostrarDetalle(mejoraActual);
+            int precio = CalcularPrecio(mejoraActual);
+
+            if (GameManager.Instance.TrySpendXP(precio))
+            {
+                mejoraActual.nivel++;
+                MostrarDetalle(mejoraActual); // actualizar vista
+            }
+            else
+            {
+                Debug.Log("No tienes suficiente XP.");
+            }
         }
     }
 
