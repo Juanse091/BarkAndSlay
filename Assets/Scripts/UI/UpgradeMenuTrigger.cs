@@ -20,7 +20,7 @@ public class UpgradeMenuTrigger : MonoBehaviour
                 GameObject clickedObj = hit.collider.gameObject;
                 string tag = clickedObj.tag;
 
-                if (tag == "Player" || tag == "ArcherDog" || tag == "MacheteDog")
+                if (tag == "Player" || tag == "ArcherDog" || tag == "MacheteDog" || tag == "FarmerDog")
                 {
                     menuManager.AbrirMenuPara(tag);
                 }

@@ -7,12 +7,14 @@ public class MacheteLogic : MonoBehaviour
     public float detectionRange = 1.5f;
     public LayerMask enemyLayer;
 
-    public float baseAttackDelay = 1f; // Tiempo entre ataques en segundos
-    public float attackDelayUpgradeMultiplier = -0.1f; // Cada mejora reduce el delay
+    public float baseAttackDelay = 1f;
+    public float attackDelayUpgradeMultiplier = -0.1f;
     private float nextAttackTime = 0f;
 
     private Animator anim;
     public int upgradeLevel = 0;
+
+    public int macheteDamage = 1; 
 
     void Start()
     {
@@ -26,6 +28,13 @@ public class MacheteLogic : MonoBehaviour
         if (hit.collider != null && Time.time >= nextAttackTime)
         {
             anim.SetTrigger("attack");
+
+            EnemyHit enemy = hit.collider.GetComponent<EnemyHit>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(macheteDamage);
+            }
+
             nextAttackTime = Time.time + GetCurrentAttackDelay();
         }
     }
@@ -38,7 +47,7 @@ public class MacheteLogic : MonoBehaviour
     private float GetCurrentAttackDelay()
     {
         float delay = baseAttackDelay + (upgradeLevel * attackDelayUpgradeMultiplier);
-        return Mathf.Max(0.1f, delay); // Nunca menos de 0.1s
+        return Mathf.Max(0.1f, delay);
     }
 
     void OnDrawGizmosSelected()
