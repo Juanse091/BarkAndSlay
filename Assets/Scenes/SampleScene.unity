@@ -365,10 +365,10 @@ RectTransform:
   - {fileID: 1684446147}
   m_Father: {fileID: 1741155667}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -180.54, y: 88}
-  m_SizeDelta: {x: 218.6453, y: 48.009}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 79.3}
+  m_SizeDelta: {x: 353.3438, y: 48.009}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &72801651
 MonoBehaviour:
@@ -486,7 +486,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 286.39, y: -5.2076}
+  m_AnchoredPosition: {x: 286.39, y: -36.511}
   m_SizeDelta: {x: 443.1086, y: 73.0212}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &85994548
@@ -511,10 +511,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 60
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 0
     m_MaxSize: 60
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1037,7 +1037,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 0d4bafcc19afc4b4fb5ae5da7d322cb1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1202,6 +1202,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: 165ca02bf4dc15f42b46eb5181fe8075, type: 3}
   m_PrefabInstance: {fileID: 403903420}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &346047168
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346047162}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.31999987, y: 2.56}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.42857146, y: 0}
+    oldSize: {x: 4.48, y: 5.12}
+    newSize: {x: 4.48, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.48, y: 5.12}
+  m_EdgeRadius: 0
 --- !u!1 &401070928
 GameObject:
   m_ObjectHideFlags: 0
@@ -1334,7 +1379,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7878350319992209165, guid: 165ca02bf4dc15f42b46eb5181fe8075, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1844534353}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 165ca02bf4dc15f42b46eb5181fe8075, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 346047168}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 165ca02bf4dc15f42b46eb5181fe8075, type: 3}
 --- !u!1 &501763123
 GameObject:
@@ -1692,6 +1740,7 @@ MonoBehaviour:
   baseAttackDelay: 1
   attackDelayUpgradeMultiplier: -0.1
   upgradeLevel: 0
+  macheteDamage: 1
 --- !u!1 &595974522
 GameObject:
   m_ObjectHideFlags: 0
@@ -2188,10 +2237,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1741155667}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 172.4583, y: 88}
-  m_SizeDelta: {x: 202.3033, y: 58.9164}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 271.36, y: -89}
+  m_SizeDelta: {x: 413.0523, y: 58.916412}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &905351149
 MonoBehaviour:
@@ -2215,10 +2264,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 60
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 5
     m_MaxSize: 60
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -2624,8 +2673,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 286.39, y: -138}
-  m_SizeDelta: {x: 443.1086, y: 149.8139}
+  m_AnchoredPosition: {x: 296.9274, y: -138.17085}
+  m_SizeDelta: {x: 464.1834, y: 150.1517}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1430790113
 MonoBehaviour:
@@ -2649,10 +2698,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 60
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 6
+    m_MinSize: 4
     m_MaxSize: 60
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -2779,8 +2828,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 826, y: 495}
-  m_SizeDelta: {x: 239.888, y: 150.058}
+  m_AnchoredPosition: {x: 816.41736, y: 495}
+  m_SizeDelta: {x: 259.0533, y: 150.058}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1673175506
 MonoBehaviour:
@@ -2809,7 +2858,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 300
-    m_Alignment: 4
+    m_Alignment: 5
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -2858,7 +2907,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 651, y: 495}
+  m_AnchoredPosition: {x: 632, y: 495}
   m_SizeDelta: {x: 239.888, y: 150.058}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1682115582
@@ -3112,60 +3161,89 @@ MonoBehaviour:
   - {fileID: -1999508955, guid: 88a4f22aca6117f4891deeb2ce77b001, type: 3}
   - {fileID: 490235948, guid: 88a4f22aca6117f4891deeb2ce77b001, type: 3}
   - {fileID: 1470112271, guid: 88a4f22aca6117f4891deeb2ce77b001, type: 3}
+  farmerIdle:
+  - {fileID: -7413850857937533297, guid: 165ca02bf4dc15f42b46eb5181fe8075, type: 3}
+  - {fileID: 1652799084567874276, guid: 165ca02bf4dc15f42b46eb5181fe8075, type: 3}
+  - {fileID: 7774545704690686879, guid: 165ca02bf4dc15f42b46eb5181fe8075, type: 3}
+  - {fileID: 2332887193002181172, guid: 165ca02bf4dc15f42b46eb5181fe8075, type: 3}
+  - {fileID: 5953537577652461717, guid: 165ca02bf4dc15f42b46eb5181fe8075, type: 3}
+  - {fileID: 2063541935004187884, guid: 165ca02bf4dc15f42b46eb5181fe8075, type: 3}
+  - {fileID: -907239597742621902, guid: 165ca02bf4dc15f42b46eb5181fe8075, type: 3}
+  - {fileID: 2235095936431044605, guid: 165ca02bf4dc15f42b46eb5181fe8075, type: 3}
+  - {fileID: -1319530569292336324, guid: 165ca02bf4dc15f42b46eb5181fe8075, type: 3}
+  - {fileID: 7521011561669721139, guid: 165ca02bf4dc15f42b46eb5181fe8075, type: 3}
+  - {fileID: -4895171483874548926, guid: 165ca02bf4dc15f42b46eb5181fe8075, type: 3}
+  - {fileID: 2223917105705950004, guid: 165ca02bf4dc15f42b46eb5181fe8075, type: 3}
+  - {fileID: 7152311003193918922, guid: 165ca02bf4dc15f42b46eb5181fe8075, type: 3}
+  - {fileID: -8921756422192244134, guid: 165ca02bf4dc15f42b46eb5181fe8075, type: 3}
   mejorasPlayer:
   - nombre: Damage
-    descripcion: increases damage by +1
+    descripcion: Increases base attack damage by +1
     nivel: 0
     nivelMaximo: 5
     precioXP: 100
   - nombre: Archer Dog
-    descripcion: Unlocks the archer Dog
+    descripcion: Unlocks the Archer companion to assist you in battle
     nivel: 0
     nivelMaximo: 1
-    precioXP: 1
+    precioXP: 1000
   - nombre: Machete Dog
-    descripcion: Unlocks the Machete Dog
+    descripcion: Unlocks the Machete companion and opens a new road path
     nivel: 0
     nivelMaximo: 1
-    precioXP: 1
+    precioXP: 1500
   - nombre: Farmer Dog
-    descripcion: Unlocks the Farmer Dog
+    descripcion: Unlocks the Farmer companion that spawns XP orbs over time.
     nivel: 0
     nivelMaximo: 1
-    precioXP: 1
+    precioXP: 200
+  - nombre: Extraction
+    descripcion: Buy your freedom
+    nivel: 0
+    nivelMaximo: 1
+    precioXP: 999999999
   mejorasArcher:
-  - nombre: 
-    descripcion: 
+  - nombre: Archer SPD
+    descripcion: Reduces the time between each arrow shot
     nivel: 0
-    nivelMaximo: 0
-    precioXP: 0
-  - nombre: 
-    descripcion: 
+    nivelMaximo: 5
+    precioXP: 300
+  - nombre: Archer RNG
+    descripcion: Increases the detection radius to find enemies further away
     nivel: 0
-    nivelMaximo: 0
-    precioXP: 0
-  - nombre: 
-    descripcion: 
-    nivel: 0
-    nivelMaximo: 0
-    precioXP: 0
+    nivelMaximo: 5
+    precioXP: 200
   mejorasMachete:
-  - nombre: 
-    descripcion: 
+  - nombre: Machete DMG
+    descripcion: Increases the machete's base damage
     nivel: 0
-    nivelMaximo: 0
-    precioXP: 0
-  - nombre: 
-    descripcion: 
+    nivelMaximo: 5
+    precioXP: 300
+  - nombre: Machete SPD
+    descripcion: Reduces the attack delay between machete swings
     nivel: 0
-    nivelMaximo: 0
-    precioXP: 0
+    nivelMaximo: 5
+    precioXP: 350
+  mejorasFarmer:
+  - nombre: Farmer SPD
+    descripcion: Decreases the time between XP spawns by -0.5
+    nivel: 0
+    nivelMaximo: 8
+    precioXP: 75
+  - nombre: Farmer XP
+    descripcion: Increases the amount of XP dropped each cycle by +1
+    nivel: 0
+    nivelMaximo: 9
+    precioXP: 100
   archerDog: {fileID: 2030269887}
   farmerDog: {fileID: 346047162}
   macheteDog: {fileID: 547174300}
   macheteExtraEnable: {fileID: 401070928}
   macheteExtraDisable: {fileID: 694992740}
   clickerHitBox: {fileID: 501763126}
+  macheteLogic: {fileID: 547174305}
+  archerBot: {fileID: 2030269888}
+  farmerSpawner: {fileID: 1844534354}
   prefabUpgradeItem: {fileID: 324204696415785987, guid: f5502bcf50e1474448ab64f938cc5505, type: 3}
   contenedor: {fileID: 1716498327}
   detailPanel: {fileID: 1741155666}
@@ -3752,8 +3830,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 292.88, y: -95}
-  m_SizeDelta: {x: 585.7632, y: 810.782}
+  m_AnchoredPosition: {x: 324.04865, y: -95}
+  m_SizeDelta: {x: 678.1425, y: 810.782}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1999176618
 MonoBehaviour:

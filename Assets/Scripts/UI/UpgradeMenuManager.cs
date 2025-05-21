@@ -21,11 +21,13 @@ public class UpgradeMenuManager : MonoBehaviour
     public Sprite[] playerIdle;
     public Sprite[] archerIdle;
     public Sprite[] macheteIdle;
+    public Sprite[] farmerIdle;
 
     [Header("Mejoras por tipo")]
     public List<Mejora> mejorasPlayer;
     public List<Mejora> mejorasArcher;
     public List<Mejora> mejorasMachete;
+    public List<Mejora> mejorasFarmer;
 
     [Header("Dog Unlocks")]
     public GameObject archerDog;
@@ -38,6 +40,15 @@ public class UpgradeMenuManager : MonoBehaviour
 
     [Header("Daño del jugador")]
     public ClickerHitBox clickerHitBox;
+
+    [Header("MacheteDog Logic")]
+    public MacheteLogic macheteLogic;
+
+    [Header("ArcherBot Logic")]
+    public ArcherBot archerBot;
+
+    [Header("Farmer Logic")]
+    public XPSpawner farmerSpawner;
 
     [Header("UI - Lista de mejoras")]
     public GameObject prefabUpgradeItem;
@@ -76,6 +87,10 @@ public class UpgradeMenuManager : MonoBehaviour
             case "MacheteDog":
                 idleAnimator.CargarAnimacion(macheteIdle);
                 mejorasActuales = mejorasMachete;
+                break;
+            case "FarmerDog":
+                idleAnimator.CargarAnimacion(farmerIdle);
+                mejorasActuales = mejorasFarmer;
                 break;
         }
 
@@ -128,7 +143,7 @@ public class UpgradeMenuManager : MonoBehaviour
             if (GameManager.Instance.TrySpendXP(precio))
             {
                 mejoraActual.nivel++;
-                AplicarMejora(mejoraActual); 
+                AplicarMejora(mejoraActual);
                 MostrarDetalle(mejoraActual);
             }
             else
@@ -162,10 +177,7 @@ public class UpgradeMenuManager : MonoBehaviour
         {
             case "Damage":
                 if (clickerHitBox != null)
-                {
                     clickerHitBox.damage += 1;
-                    Debug.Log("Daño actualizado: " + clickerHitBox.damage);
-                }
                 break;
 
             case "Archer Dog":
@@ -186,8 +198,41 @@ public class UpgradeMenuManager : MonoBehaviour
                 if (macheteExtraDisable != null)
                     macheteExtraDisable.SetActive(false);
                 break;
+
+            case "Machete DMG":
+                if (macheteLogic != null)
+                    macheteLogic.macheteDamage += 1;
+                break;
+
+            case "Machete SPD":
+                if (macheteLogic != null)
+                    macheteLogic.UpgradeAttack();
+                break;
+
+            case "Archer SPD":
+                if (archerBot != null)
+                    archerBot.UpgradeFireRate(0.22f);
+                break;
+
+            case "Archer RNG":
+                if (archerBot != null)
+                    archerBot.UpgradeRadius(1f);
+                break;
+
+            case "Farmer SPD":
+                if (farmerSpawner != null)
+                    farmerSpawner.UpgradeSpawnRate(0.5f); // reduce 0.5s por mejora
+                break;
+
+            case "Farmer XP":
+                if (farmerSpawner != null)
+                    farmerSpawner.UpgradeXPAmount(1); // aumenta +1 por mejora
+                break;
+
         }
     }
+
+
 
 
 }
