@@ -5,7 +5,7 @@ public class Arrow : MonoBehaviour
     public float speed = 10f;
     public float lifeTime = 3f;
 
-    public float damage = 1f;
+    public int damage = 1;
     private Vector2 direction;
 
 

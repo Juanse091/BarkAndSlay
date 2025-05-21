@@ -16,8 +16,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioClip golpeFuerte;
 
     private int counter;
-    private int golpeCount = 0;
-
     public static GameManager Instance;
 
     private void Awake()
@@ -47,8 +45,6 @@ public class GameManager : MonoBehaviour
     {
         animClicker.SetTrigger("Click");
         animPlayer.SetTrigger("Attack");
-
-        golpeCount++;
         
     }
 

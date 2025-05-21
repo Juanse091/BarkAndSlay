@@ -33,6 +33,5 @@ public class SpawnerLogic : MonoBehaviour
     {
         GameObject enemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
         currentEnemies.Add(enemy);
-        Debug.Log("Enemy spawned at: " + Time.time);
     }
 }

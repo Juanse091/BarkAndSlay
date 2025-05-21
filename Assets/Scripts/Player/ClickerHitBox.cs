@@ -5,7 +5,7 @@ using UnityEngine;
 public class ClickerHitBox : MonoBehaviour
 {
 
-    public float damage = 1f;
+    public int damage = 1;
 
     void Start()
     {
@@ -16,7 +16,6 @@ public class ClickerHitBox : MonoBehaviour
         if (collision.CompareTag("enemy"))
         {
             collision.GetComponent<EnemyHit>()?.TakeDamage(damage);
-            GameManager.Instance.UpdateCounter();
         }
     }
 
