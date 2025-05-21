@@ -27,6 +27,18 @@ public class UpgradeMenuManager : MonoBehaviour
     public List<Mejora> mejorasArcher;
     public List<Mejora> mejorasMachete;
 
+    [Header("Dog Unlocks")]
+    public GameObject archerDog;
+    public GameObject farmerDog;
+    public GameObject macheteDog;
+
+    [Header("MacheteDog Extra")]
+    public GameObject macheteExtraEnable;
+    public GameObject macheteExtraDisable;
+
+    [Header("Daño del jugador")]
+    public ClickerHitBox clickerHitBox;
+
     [Header("UI - Lista de mejoras")]
     public GameObject prefabUpgradeItem;
     public Transform contenedor;
@@ -116,7 +128,8 @@ public class UpgradeMenuManager : MonoBehaviour
             if (GameManager.Instance.TrySpendXP(precio))
             {
                 mejoraActual.nivel++;
-                MostrarDetalle(mejoraActual); // actualizar vista
+                AplicarMejora(mejoraActual); 
+                MostrarDetalle(mejoraActual);
             }
             else
             {
@@ -124,6 +137,7 @@ public class UpgradeMenuManager : MonoBehaviour
             }
         }
     }
+
 
     public void CerrarMenu()
     {
@@ -141,4 +155,39 @@ public class UpgradeMenuManager : MonoBehaviour
         float precioFinal = mejora.precioXP * Mathf.Pow(incremento, mejora.nivel);
         return Mathf.RoundToInt(precioFinal);
     }
+
+    private void AplicarMejora(Mejora mejora)
+    {
+        switch (mejora.nombre)
+        {
+            case "Damage":
+                if (clickerHitBox != null)
+                {
+                    clickerHitBox.damage += 1;
+                    Debug.Log("Daño actualizado: " + clickerHitBox.damage);
+                }
+                break;
+
+            case "Archer Dog":
+                if (archerDog != null)
+                    archerDog.SetActive(true);
+                break;
+
+            case "Farmer Dog":
+                if (farmerDog != null)
+                    farmerDog.SetActive(true);
+                break;
+
+            case "Machete Dog":
+                if (macheteDog != null)
+                    macheteDog.SetActive(true);
+                if (macheteExtraEnable != null)
+                    macheteExtraEnable.SetActive(true);
+                if (macheteExtraDisable != null)
+                    macheteExtraDisable.SetActive(false);
+                break;
+        }
+    }
+
+
 }
